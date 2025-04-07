@@ -40,7 +40,7 @@ header {
 
     nav {
         z-index: 60;
-        height: 7vh;
+        height: 6vh;
         width: 100%;
         background-color: #000;
         position: fixed;
@@ -88,25 +88,24 @@ header {
     }
 
     img {
-        margin-top: 25vh;
-        height: 50vh;
-        aspect-ratio: 1/1;
+        margin-top: 20vh;
+        width: 30%;
     }
 
     #bandeau {
         width: 100%;
         height: 8vh;
         backdrop-filter: blur(5px);
+        padding: 1%;
         display: flex;
         justify-content: center;
-        align-items: center;
         position: absolute;
         bottom: 0;
         white-space: nowrap;
         overflow: hidden;
-        
+
         p {
-            color: white;   
+            color: white;
             display: inline-block;
             font-size: 1.5rem;
             white-space: nowrap;
@@ -572,8 +571,11 @@ footer {
         font-size: 1.2rem;
     }
     header{
+        height: 70vh;
         background-image: url("./assets/cotePorcBoucherie1024.webp");
-
+        img{
+            width: 30%;
+        }
         #bandeau{
             height: 4vh;
             p{
@@ -664,12 +666,12 @@ footer {
 }
 @media (width<750px) {
     header{
-        background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("./assets/cotePorcBoucherie750.webp");
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        height: 50vh ;
+        background-image: url("./assets/cotePorcBoucherie750.webp");
+        img{
+            margin-top: 15vh;
+            width: 30%;
+        }
         nav
         {
             ul
@@ -682,19 +684,9 @@ footer {
                 }
             }
         }
-        img {
-
-            margin-top: 0;
-            align-self: center;
-        }
     }
     main
     {
-        #presentation{
-            div:last-of-type{
-                flex-direction: column;
-            }
-        }
         #nosProduits
         {
             article
@@ -749,8 +741,11 @@ footer {
 }
 @media (width<550px) {
     header{
+        height: 35vh;
+        background-image: url("./assets/cotePorcBoucherie550.webp");
         nav{
             width: 100%;
+            height: 4vh;
             ul{
                 li{
                     a{
@@ -758,6 +753,9 @@ footer {
                     }
                 }
             }
+        }
+        img{
+            margin-top: 15vw;
         }
         #bandeau{
             height: 3vh;
@@ -843,10 +841,12 @@ footer {
         #contact{
             margin: 20px 0;
             iframe{
+                width: 75%;
+                height: 50%;
+            }
+            .aie{
+                padding: 0 10px;
                 img{
-                    margin-top: 15vh;
-                    width: 30%;
-                }
                     width: 25%;
                 }
             }
@@ -867,24 +867,6 @@ footer {
     footer{
         p{
             font-size: 1rem;
-        }
-    }
-
-@media (width<1024px) and (orientation: landscape) {
-    main{
-        #carousel-section{
-            height: 70vh;
-            .carousel-container{
-                width: 70%w;
-            }
-            .carousel{
-                .element{
-                    height: 45vh;
-                }
-                img{
-                    height: 100%;
-                }
-            }
         }
     }
 }
